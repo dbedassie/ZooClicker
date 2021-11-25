@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZooClicker.MainPage"
+             xmlns:vm="clr-namespace:ZooClicker.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid Padding="10,10,10,10" RowDefinitions="55, 100" BackgroundColor="Black">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+            <Button Text="Purchases"
+                    Clicked="Button_Clicked"
+                    Grid.Row="0"
+                    Padding="10"
+                    FontSize="10" />
+
+            <Label Text="{Binding Donations}"
+                   Grid.Row="0"
+                   FontSize="40"
+                   TextColor="White"
+                   VerticalOptions="Center"/>
+
+            <Button Text="Settings"
+                    Clicked="Button_Clicked_1"
+                    Grid.Row="0"
+                    Padding="10"
+                    FontSize="10"  />
+        </StackLayout>
+
+
+        <FlexLayout Grid.Row="1"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly"
+                    Scale="100"
+                    Direction="Column">
+
+            <Button Text="LionHabitat"
+                Command="{Binding LionCommand}"
+                Grid.Row="1"
+                FontSize="8"
+                Padding="10"
+                WidthRequest="20"
+                HeightRequest="20"
+                CornerRadius="10"
+                BorderWidth="2"
+                BorderColor="Gray"/>
+
+        </FlexLayout>
+
+        
+
+    </Grid>
+             
+
+</ContentPage>
