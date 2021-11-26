@@ -7,7 +7,7 @@
         <vm:MainPageViewModel />
     </ContentPage.BindingContext>
 
-    <Grid Padding="10,10,10,10" RowDefinitions="55, 100" BackgroundColor="Black">
+    <Grid Padding="10,10,10,10" RowDefinitions="55, *" BackgroundColor="Black">
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
@@ -34,19 +34,82 @@
         <FlexLayout Grid.Row="1"
                     AlignItems="Center"
                     JustifyContent="SpaceEvenly"
-                    Scale="100"
                     Direction="Column">
+            <Grid Padding="10, 10, 10, 10" >
 
-            <Button Text="LionHabitat"
-                Command="{Binding LionCommand}"
-                Grid.Row="1"
-                FontSize="8"
-                Padding="10"
-                WidthRequest="20"
-                HeightRequest="20"
-                CornerRadius="10"
-                BorderWidth="2"
-                BorderColor="Gray"/>
+                <Button Text="Gazelle"
+                    Grid.Row="0"
+                    Command="{Binding GazelleCommand}"
+                    FlexLayout.Order="0"
+                    FontSize="8"
+                    Padding="10"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    CornerRadius="40"
+                    BorderWidth="2"
+                    BackgroundColor="SandyBrown"
+                    BorderColor="Gray"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="1">
+
+                    <Button Text="Hyena"
+                        Command="{Binding HyenaCommand}"
+                        FlexLayout.AlignSelf="Start"
+                        FlexLayout.Order="1"
+                        FontSize="8"
+                        Padding="10"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        BorderWidth="2"
+                        BackgroundColor="RosyBrown"
+                        BorderColor="Gray"/>
+
+                    <Button Text="Giraffe"
+                        Command="{Binding GiraffeCommand}"
+                        FlexLayout.Order="2"
+                        FlexLayout.AlignSelf="Center"
+                        FontSize="8"
+                        Padding="10"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        BorderWidth="2"
+                        BackgroundColor="Goldenrod"
+                        BorderColor="Gray"/>
+
+                    <Button Text="Chimpanzee"
+                        Command="{Binding ChimpCommand}"
+                        FlexLayout.AlignSelf="End"
+                        FlexLayout.Order="3"
+                        FontSize="8"
+                        Padding="10"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        BorderWidth="2"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        BorderColor="Gray"/>
+
+                </StackLayout>
+
+
+                <Button Text="Lion"
+                    Grid.Row="2"
+                    Command="{Binding LionCommand}"
+                    FlexLayout.AlignSelf="Center"
+                    FlexLayout.Order="4"
+                    FontSize="8"
+                    Padding="10"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="40"
+                    BorderWidth="2"
+                    BackgroundColor="PaleVioletRed"
+                    BorderColor="Gray"/>
+
+            </Grid>
 
         </FlexLayout>
 
