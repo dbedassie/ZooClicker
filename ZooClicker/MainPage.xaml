@@ -35,7 +35,7 @@
                     AlignItems="Center"
                     JustifyContent="SpaceEvenly"
                     Direction="Column">
-            <Grid Padding="10, 10, 10, 10" >
+            <Grid Padding="10, 10, 10, 10" RowDefinitions="*, *" >
 
                 <Button Text="Gazelle"
                     Grid.Row="0"
@@ -102,8 +102,8 @@
                     FlexLayout.Order="4"
                     FontSize="8"
                     Padding="10"
-                    WidthRequest="40"
-                    HeightRequest="40"
+                    WidthRequest="80"
+                    HeightRequest="80"
                     CornerRadius="40"
                     BorderWidth="2"
                     BackgroundColor="PaleVioletRed"
