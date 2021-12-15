@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ZooClicker.Models
 {
-    public class Habitat
+    public abstract class Habitat
     {
         protected int level;
         protected float cost;
@@ -23,9 +23,12 @@ namespace ZooClicker.Models
 
         public void LevelUp()
         {
-            // In the future, check total $$$ and do the math
-
             level++;
+        }
+
+        public bool CheckIfBuy()
+        {
+            return donations < cost ? false : true;
         }
     }
 }

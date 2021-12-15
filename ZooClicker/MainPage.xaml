@@ -7,113 +7,99 @@
         <vm:MainPageViewModel />
     </ContentPage.BindingContext>
 
-    <Grid Padding="10,10,10,10" RowDefinitions="55, *" BackgroundColor="Black">
+    <Grid Padding="10,10,10,10" RowDefinitions="100, *" BackgroundColor="BlanchedAlmond">
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Grid.Row="0">
 
             <Button Text="Purchases"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    CornerRadius="25"
+                    BorderColor="Black"
+                    TextColor="Black"
+                    BackgroundColor="GhostWhite"
+                    BorderWidth="2"
                     Clicked="Button_Clicked"
-                    Grid.Row="0"
                     Padding="10"
                     FontSize="10" />
 
             <Label Text="{Binding Donations}"
                    Grid.Row="0"
                    FontSize="40"
-                   TextColor="White"
+                   TextColor="Black"
                    VerticalOptions="Center"/>
 
             <Button Text="Settings"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    CornerRadius="25"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    TextColor="Black"
+                    BackgroundColor="GhostWhite"
                     Clicked="Button_Clicked_1"
-                    Grid.Row="0"
                     Padding="10"
                     FontSize="10"  />
+
         </StackLayout>
+            
+        <!-- These are our habitats -->
+            <FlexLayout Direction="Column" Grid.Row="1">
 
-
-        <FlexLayout Grid.Row="1"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly"
-                    Direction="Column">
-            <Grid Padding="10, 10, 10, 10" RowDefinitions="*, *" >
-
-                <Button Text="Gazelle"
-                    Grid.Row="0"
-                    Command="{Binding GazelleCommand}"
+                <ImageButton Source="Frog"
                     FlexLayout.Order="0"
-                    FontSize="8"
+                    FlexLayout.AlignSelf="Center"
+                    Command="{Binding FrogCommand}"
+                    Grid.Row="1"
                     Padding="10"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    CornerRadius="40"
+                    WidthRequest="175"
+                    HeightRequest="175"
+                    CornerRadius="87"
                     BorderWidth="2"
-                    BackgroundColor="SandyBrown"
-                    BorderColor="Gray"/>
+                    BackgroundColor="GreenYellow"
+                    BorderColor="Black"/>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="1">
+                <!-- These are the two habitats in the same row -->
+                <StackLayout Orientation="Horizontal">
 
-                    <Button Text="Hyena"
-                        Command="{Binding HyenaCommand}"
-                        FlexLayout.AlignSelf="Start"
-                        FlexLayout.Order="1"
-                        FontSize="8"
-                        Padding="10"
-                        WidthRequest="80"
-                        HeightRequest="80"
-                        CornerRadius="40"
-                        BorderWidth="2"
-                        BackgroundColor="RosyBrown"
-                        BorderColor="Gray"/>
-
-                    <Button Text="Giraffe"
+                    <ImageButton Source="Giraffe"
                         Command="{Binding GiraffeCommand}"
-                        FlexLayout.Order="2"
-                        FlexLayout.AlignSelf="Center"
-                        FontSize="8"
+                        FlexLayout.Order="1"
+                        Grid.Row="1"
                         Padding="10"
-                        WidthRequest="80"
-                        HeightRequest="80"
-                        CornerRadius="40"
+                        WidthRequest="175"
+                        HeightRequest="175"
+                        CornerRadius="87"
                         BorderWidth="2"
                         BackgroundColor="Goldenrod"
-                        BorderColor="Gray"/>
+                        BorderColor="Black"/>
 
-                    <Button Text="Chimpanzee"
-                        Command="{Binding ChimpCommand}"
-                        FlexLayout.AlignSelf="End"
-                        FlexLayout.Order="3"
-                        FontSize="8"
-                        Padding="10"
-                        WidthRequest="80"
-                        HeightRequest="80"
-                        CornerRadius="40"
-                        BorderWidth="2"
-                        BackgroundColor="Black"
-                        TextColor="White"
-                        BorderColor="Gray"/>
+                    <ImageButton Source="Chimpanzee"
+                            Command="{Binding ChimpCommand}"
+                            FlexLayout.Order="2"
+                            Padding="10"
+                            WidthRequest="175"
+                            HeightRequest="175"
+                            CornerRadius="87"
+                            BorderWidth="2"
+                            BackgroundColor="Black"
+                            BorderColor="Black"/>
 
                 </StackLayout>
 
-
-                <Button Text="Lion"
-                    Grid.Row="2"
+                <ImageButton Source="Lion"
                     Command="{Binding LionCommand}"
+                    FlexLayout.Order="3"
                     FlexLayout.AlignSelf="Center"
-                    FlexLayout.Order="4"
-                    FontSize="8"
                     Padding="10"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    CornerRadius="40"
+                    WidthRequest="175"
+                    HeightRequest="175"
+                    CornerRadius="87"
                     BorderWidth="2"
                     BackgroundColor="PaleVioletRed"
-                    BorderColor="Gray"/>
+                    BorderColor="Black"/>
 
-            </Grid>
-
-        </FlexLayout>
-
-        
+            </FlexLayout>
 
     </Grid>
              

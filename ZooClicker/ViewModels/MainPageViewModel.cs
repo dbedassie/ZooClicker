@@ -28,8 +28,7 @@ namespace ZooClicker.ViewModels
         public ICommand LionCommand { get; set; }
         public ICommand ChimpCommand { get; set; }
         public ICommand GiraffeCommand { get; set; }
-        public ICommand GazelleCommand { get; set; }
-        public ICommand HyenaCommand { get; set; }
+        public ICommand FrogCommand { get; set; }
 
 
         public MainPageViewModel()
@@ -52,14 +51,9 @@ namespace ZooClicker.ViewModels
                 Donations += Habitats["Giraffe"].Donations;
             });
 
-            GazelleCommand = new Command(() =>
+            FrogCommand = new Command(() =>
             {
-                Donations += Habitats["Gazelle"].Donations;
-            });
-
-            HyenaCommand = new Command(() =>
-            {
-                Donations += Habitats["Hyena"].Donations;
+                Donations += Habitats["Frog"].Donations;
             });
         }
 
@@ -69,14 +63,12 @@ namespace ZooClicker.ViewModels
         {
             Habitats = new Dictionary<string, Habitat>();
             LionHabitat lion = new LionHabitat();
-            GazelleHabitat gazelle = new GazelleHabitat();
+            FrogHabitat frog = new FrogHabitat();
             ChimpHabitat chimp = new ChimpHabitat();
             GiraffeHabitat giraffe = new GiraffeHabitat();
-            HyenaHabitat hyena = new HyenaHabitat();
 
             Habitats.Add(lion.Name, lion);
-            Habitats.Add(gazelle.Name, gazelle);
-            Habitats.Add(hyena.Name, hyena);
+            Habitats.Add(frog.Name, frog);
             Habitats.Add(giraffe.Name, giraffe);
             Habitats.Add(chimp.Name, chimp);
         }

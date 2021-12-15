@@ -113,6 +113,14 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Giraffe.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Giraffe.imageset\giraffe_habitat.png" />
+    <ImageAsset Include="Assets.xcassets\Lion.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Lion.imageset\lion_habitat.png" />
+    <ImageAsset Include="Assets.xcassets\Chimpanzee.imageset\chimp_habitat.png" />
+    <ImageAsset Include="Assets.xcassets\Chimpanzee.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frog.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Frog.imageset\frog_habitat.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,5 +140,11 @@
       <Project>{2D3D83C8-0297-4B16-ACEC-F1E88D01ABC1}</Project>
       <Name>ZooClicker</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Giraffe.imageset\" />
+    <Folder Include="Assets.xcassets\Lion.imageset\" />
+    <Folder Include="Assets.xcassets\Chimpanzee.imageset\" />
+    <Folder Include="Assets.xcassets\Frog.imageset\" />
   </ItemGroup>
 </Project>
