@@ -121,6 +121,10 @@
     <ImageAsset Include="Assets.xcassets\Chimpanzee.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Frog.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Frog.imageset\frog_habitat.png" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\splash.png" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\splash-1.png" />
+    <InterfaceDefinition Include="Resources\en.lproj\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -146,5 +150,6 @@
     <Folder Include="Assets.xcassets\Lion.imageset\" />
     <Folder Include="Assets.xcassets\Chimpanzee.imageset\" />
     <Folder Include="Assets.xcassets\Frog.imageset\" />
+    <Folder Include="Assets.xcassets\Splash.imageset\" />
   </ItemGroup>
 </Project>

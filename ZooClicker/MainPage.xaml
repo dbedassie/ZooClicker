@@ -3,23 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZooClicker.MainPage"
              xmlns:vm="clr-namespace:ZooClicker.ViewModels">
-    <ContentPage.BindingContext>
-        <vm:MainPageViewModel />
-    </ContentPage.BindingContext>
 
-    <Grid Padding="10,10,10,10" RowDefinitions="100, *" BackgroundColor="BlanchedAlmond">
+    <Grid Padding="10,10,10,10" RowDefinitions="100, *, 50" BackgroundColor="BlanchedAlmond">
 
         <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Grid.Row="0">
 
-            <Button Text="Purchases"
+            <Button Text="Stats"
                     HeightRequest="100"
                     WidthRequest="100"
                     CornerRadius="25"
                     BorderColor="Black"
                     TextColor="Black"
-                    BackgroundColor="GhostWhite"
                     BorderWidth="2"
-                    Clicked="Button_Clicked"
+                    Clicked="Button_Clicked_2"
                     Padding="10"
                     FontSize="10" />
 
@@ -36,7 +32,6 @@
                     BorderWidth="2"
                     BorderColor="Black"
                     TextColor="Black"
-                    BackgroundColor="GhostWhite"
                     Clicked="Button_Clicked_1"
                     Padding="10"
                     FontSize="10"  />
@@ -100,6 +95,26 @@
                     BorderColor="Black"/>
 
             </FlexLayout>
+
+            <Button x:Name="LuckyBtn"
+                    Text="$$$"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    TextColor="Black"
+                    Command="{Binding LuckyCommand}"
+                    IsVisible="False"/>
+
+            <Button Text="Purchase"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BorderWidth="2"
+                    TextColor="Black"
+                    Command="{Binding UpgradesCommand}"
+                    Grid.Row="2"/>
 
     </Grid>
              

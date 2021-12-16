@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ZooClicker.ViewModels"
+    x:Class="ZooClicker.UpgradesPage">
+
+    <Grid RowDefinitions="50, *" RowSpacing="5" Padding="10, 10, 10, 10" BackgroundColor="BlanchedAlmond">
+            <Label Text="{Binding Donations}" Grid.Row="0" HorizontalOptions="Center" FontSize="48"/>
+            
+            <FlexLayout Grid.Row="1" Direction="Column" >
+
+                <Grid RowDefinitions="*, *" RowSpacing="50">
+
+
+                    <StackLayout FlexLayout.Order="0" FlexLayout.AlignSelf="Center" Spacing="10" Grid.Row="0">
+                        <Label Text="Frog Habitat Upgrade"  TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding FrogCost, StringFormat='Cost: {0}'}" TextColor="Black" HorizontalOptions="Center" />
+                        <Label Text="{Binding FrogLevel, StringFormat='Level: {0}'}" TextColor="Black" HorizontalOptions="Center" />
+                        <Button Command="{Binding FrogUpgrade}" BackgroundColor="GreenYellow" WidthRequest="100" CornerRadius="10" Text="Upgrade"
+                                BorderWidth="2" BorderColor="Black" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout FlexLayout.Order="1" FlexLayout.AlignSelf="Center" Spacing="10" Grid.Row="1">
+                        <Label Text="Giraffe Habitat Upgrade"  TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding GiraffeCost, StringFormat='Cost: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding GiraffeLevel, StringFormat='Level: {0}'}" TextColor="Black" HorizontalOptions="Center" />
+                        <Button Command="{Binding GiraffeUpgrade}" WidthRequest="100" CornerRadius="10" Text="Upgrade" BackgroundColor="Goldenrod"
+                                BorderWidth="2" BorderColor="Black" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout FlexLayout.Order="2" FlexLayout.AlignSelf="Center" Spacing="10" Grid.Row="2">
+                        <Label Text="Chimpanzee Habitat Upgrade" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding ChimpCost, StringFormat='Cost: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding ChimpLevel, StringFormat='Level: {0}'}" TextColor="Black" HorizontalOptions="Center" />
+                        <Button Command="{Binding ChimpUpgrade}" WidthRequest="100" CornerRadius="10" Text="Upgrade" BackgroundColor="Black"
+                                BorderWidth="2" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout FlexLayout.Order="3" FlexLayout.AlignSelf="Center" Spacing="10" Grid.Row="3">
+                        <Label Text="Lion Habitat Upgrade"  TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding LionCost, StringFormat='Cost: {0}'}" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Text="{Binding LionLevel, StringFormat='Level: {0}'}" TextColor="Black" HorizontalOptions="Center" />
+                        <Button Command="{Binding LionUpgrade}" WidthRequest="100" BackgroundColor="PaleVioletRed" CornerRadius="10" BorderWidth="2" Text="Upgrade"
+                                TextColor="White"/>
+                    </StackLayout>
+
+                </Grid>
+
+        </FlexLayout>
+    </Grid>
+
+</ContentPage>

@@ -4,16 +4,16 @@ namespace ZooClicker.Models
     public abstract class Habitat
     {
         protected int level;
-        protected float cost;
-        protected float donations;
+        protected int cost;
+        protected int donations;
         protected string name;
 
         public int Level { get => level; }
-        public float Cost { get => cost; }
-        public float Donations { get => donations; set => donations = value; }
+        public int Cost { get => cost; }
+        public int Donations { get => donations; set => donations = value; }
         public string Name { get => name; set => name = value; }
 
-        public Habitat(int lvl = 1, float cst = 1, float don = 1, string n = "Habitat")
+        public Habitat(int lvl = 1, int cst = 1, int don = 1, string n = "Habitat")
         {
             level = lvl;
             cost = cst;
@@ -21,14 +21,17 @@ namespace ZooClicker.Models
             name = n;
         }
 
-        public void LevelUp()
+        public int LevelUp()
         {
             level++;
+            cost = (int)Math.Floor((float)cost * 1.5f);
+            Donations += (int)Math.Floor((float)Donations / 5);
+            return cost;
         }
 
-        public bool CheckIfBuy()
+        public bool CheckIfBuy(int money)
         {
-            return donations < cost ? false : true;
+            return money < cost ? false : true;
         }
     }
 }

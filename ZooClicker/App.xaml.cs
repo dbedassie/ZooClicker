@@ -6,6 +6,8 @@ namespace ZooClicker
 {
     public partial class App : Application
     {
+        public static float Donations = 100;
+
         public App()
         {
             InitializeComponent();
